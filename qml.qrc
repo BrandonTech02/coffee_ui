@@ -21,5 +21,9 @@
         <file>images/arrow-right.png</file>
         <file>CoffeeBrewing.qml</file>
         <file>videos/CoffeeBrewing.mp4</file>
+        <file>images/setting.png</file>
+        <file>SettingPage.qml</file>
+        <file>images/waterdrop.png</file>
+        <file>images/power-button.png</file>
     </qresource>
 </RCC>

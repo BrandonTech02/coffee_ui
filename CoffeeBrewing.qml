@@ -1,8 +1,23 @@
 import QtQuick 2.0
 import QtMultimedia 5.5
+import QtQuick.Controls 1.5
+
 Item {
 
     property string myVariable: ""
+
+    Button {
+        id: cancelButton
+        width: 80
+        height: 40
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.margins: 30
+        text: "Cancel"
+        onClicked: {
+            mainLoader.source = "StackViewPage.qml"
+        }
+    }
 
     Text {
         id: coffeeTitle
@@ -29,13 +44,10 @@ Item {
         id: player
         source: "qrc:/videos/CoffeeBrewing.mp4"
         autoPlay: true
-        loops: 1
 
-        onPlaybackStateChanged: {
-            if (playbackState === MediaPlayer.EndOfMedia) {
-                player.pause()
-                coffeeText.visible = true
-            }
+        onStopped: {
+            player.pause()
+            coffeeText.visible = true
         }
     }
 

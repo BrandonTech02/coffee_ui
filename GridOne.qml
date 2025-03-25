@@ -57,4 +57,21 @@ Item {
             }
         }
     }
+
+    Image {
+        id: settingImage
+        height: 50
+        width: 50
+        source: "qrc:/images/setting.png"
+        anchors {
+            top: parent.top
+            left: parent.left
+            margins: 20
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: stackview.push("qrc:/SettingPage.qml")
+        }
+    }
 }
