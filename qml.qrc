@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>SwipeView.qml</file>
+        <file>Page.qml</file>
+        <file>images/espresso.png</file>
+        <file>CoffeeStrength.qml</file>
+        <file>images/bean-filled.png</file>
+        <file>images/bean-grayed.png</file>
+        <file>images/americano.png</file>
+        <file>images/latte.png</file>
+        <file>images/cappuccino.png</file>
+        <file>images/macchiato.png</file>
+        <file>GridOne.qml</file>
+        <file>StackViewPage.qml</file>
+        <file>images/empty-cup.png</file>
+        <file>images/empty-cup(ori_size).png</file>
+        <file>images/previous.png</file>
+        <file>images/arrow-left.png</file>
+        <file>images/arrow-right.png</file>
+        <file>CoffeeBrewing.qml</file>
+        <file>videos/CoffeeBrewing.mp4</file>
+    </qresource>
+</RCC>
