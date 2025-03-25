@@ -2,6 +2,9 @@ import QtQuick 2.0
 import QtQuick.Controls 1.5
 
 Item {
+    property bool isPressed: false
+    property real pressDuration: 0
+    property real requiredHoldTime: 1500
     Row {
         anchors.centerIn: parent
         spacing: 20
@@ -23,6 +26,11 @@ Item {
             Image {
                 anchors.fill: parent
                 source: "qrc:/images/waterdrop.png"
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: stackview.push("qrc:/LoadingCircle.qml")
+                }
             }
         }
 
@@ -43,6 +51,13 @@ Item {
             Image {
                 anchors.fill: parent
                 source: "qrc:/images/power-button.png"
+                MouseArea {
+                    id: buttonArea
+                    anchors.fill: parent
+                    onClicked: {
+                        Qt.quit()
+                    }
+                }
             }
         }
     }
@@ -63,3 +78,5 @@ Item {
         }
     }
 }
+
+

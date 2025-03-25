@@ -30,7 +30,7 @@ Item {
             width: 110
             height: 110
             color: "grey"
-            radius: 5
+            radius: 20
 
             Image {
                 id: coffeeImage

@@ -25,5 +25,6 @@
         <file>SettingPage.qml</file>
         <file>images/waterdrop.png</file>
         <file>images/power-button.png</file>
+        <file>LoadingCircle.qml</file>
     </qresource>
 </RCC>
