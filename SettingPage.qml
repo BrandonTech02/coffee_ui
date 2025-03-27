@@ -31,7 +31,7 @@ Item {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: false} )
+                    onClicked: stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: false } )
                 }
             }
         }
@@ -58,7 +58,7 @@ Item {
                     id: buttonArea
                     anchors.fill: parent
                     onClicked: {
-                        stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: true} )
+                        stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: true } )
                     }
                 }
             }
