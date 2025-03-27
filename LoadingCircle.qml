@@ -3,6 +3,8 @@ import QtQuick.Controls 1.5
 
 Item {
 
+    property bool quitAfterLoading: false
+
     Text {
         text: "Rinsing..."
         font.pixelSize: 30
@@ -63,8 +65,12 @@ Item {
                     if (loadingCircle.endAngle >= Math.PI * 2 - Math.PI / 2) {
                         //loadingCircle.endAngle = -Math.PI / 2; // Reset after a full rotation
                         running: false
-                        stop()
-                        stackview.pop()
+                        if (quitAfterLoading) {
+                            Qt.quit()
+                        }else {
+                            stop()
+                            stackview.pop()
+                        }
                     }
                     loadingCircle.requestPaint(); // Redraw the canvas
                 }

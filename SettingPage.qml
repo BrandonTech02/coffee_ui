@@ -2,9 +2,11 @@ import QtQuick 2.0
 import QtQuick.Controls 1.5
 
 Item {
-    property bool isPressed: false
-    property real pressDuration: 0
-    property real requiredHoldTime: 1500
+
+    id: settingPage
+
+    signal powerSignal()
+
     Row {
         anchors.centerIn: parent
         spacing: 20
@@ -29,7 +31,7 @@ Item {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: stackview.push("qrc:/LoadingCircle.qml")
+                    onClicked: stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: false} )
                 }
             }
         }
@@ -49,13 +51,14 @@ Item {
             }
 
             Image {
+                id: powerButton
                 anchors.fill: parent
                 source: "qrc:/images/power-button.png"
                 MouseArea {
                     id: buttonArea
                     anchors.fill: parent
                     onClicked: {
-                        Qt.quit()
+                        stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: true} )
                     }
                 }
             }
