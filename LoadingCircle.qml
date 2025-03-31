@@ -29,7 +29,7 @@ Item {
             width: 150
             height: 150
 
-            property real endAngle: -Math.PI / 20 // Start the endAngle at the top (12 o'clock)
+            property real endAngle: -Math.PI / 2 // Start the endAngle at the top (12 o'clock)
 
             onPaint: {
                 var ctx = getContext("2d");
@@ -69,7 +69,7 @@ Item {
                 running: true
                 repeat: true
                 onTriggered: {
-                    loadingCircle.endAngle += 0.02; // Increment the end angle for wrapping
+                    loadingCircle.endAngle += 0.01; // Increment the end angle for wrapping
                     if (loadingCircle.endAngle >= Math.PI * 2 - Math.PI / 2) {
                         //loadingCircle.endAngle = -Math.PI / 2; // Reset after a full rotation
                         running: false
