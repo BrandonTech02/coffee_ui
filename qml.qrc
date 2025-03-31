@@ -26,5 +26,6 @@
         <file>images/waterdrop.png</file>
         <file>images/power-button.png</file>
         <file>LoadingCircle.qml</file>
+        <file>images/coffeeLevel.png</file>
     </qresource>
 </RCC>

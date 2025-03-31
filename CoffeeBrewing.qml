@@ -46,16 +46,44 @@ Item {
         autoPlay: true
 
         onStopped: {
-            player.pause()
+            player.stop()
             coffeeText.visible = true
+            coffeeFill.visible = true
+            videoOutput.visible = false
+            cancelButton.visible = false
+            doneButton.visible = true
         }
     }
 
     VideoOutput {
+        id: videoOutput
         width:105
         height:201
-        id: videoOutput
         source: player
         anchors.centerIn: parent
+    }
+
+    Image {
+        id: coffeeFill
+        fillMode: Image.PreserveAspectFit
+        width : 120
+        height: 171
+        source: "qrc:/images/coffeeLevel.png"
+        visible: false
+        anchors.centerIn: parent
+    }
+
+    Button {
+        id: doneButton
+        visible: false
+        width: 80
+        height: 40
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        anchors.margins: 30
+        text: "Done!"
+        onClicked: {
+            mainLoader.source = "StackViewPage.qml"
+        }
     }
 }
