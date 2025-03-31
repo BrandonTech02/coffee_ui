@@ -4,6 +4,7 @@ import QtQuick.Controls 1.5
 Item {
 
     property bool quitAfterLoading: false
+    property bool isPowerOff: false
 
     Text {
         text: "Rinsing..."
@@ -54,6 +55,13 @@ Item {
                 ctx.beginPath();
                 ctx.arc(centerX, centerY, radius, startAngle, endAngle, false);
                 ctx.stroke();
+            }
+
+            Image {
+                source: "qrc:/images/waterdrop.png"
+                width: 90
+                height: 90
+                anchors.centerIn: parent
             }
 
             Timer {

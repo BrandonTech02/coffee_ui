@@ -5,8 +5,6 @@ Item {
 
     id: settingPage
 
-    signal powerSignal()
-
     Row {
         anchors.centerIn: parent
         spacing: 20
@@ -31,7 +29,7 @@ Item {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: false } )
+                    onClicked: stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: false, isPowerOff: false } )
                 }
             }
         }
@@ -58,7 +56,7 @@ Item {
                     id: buttonArea
                     anchors.fill: parent
                     onClicked: {
-                        stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: true } )
+                        stackview.push("qrc:/LoadingCircle.qml", { quitAfterLoading: true, isPowerOff: true } )
                     }
                 }
             }
