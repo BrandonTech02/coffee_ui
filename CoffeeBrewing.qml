@@ -86,4 +86,20 @@ Item {
             mainLoader.source = "StackViewPage.qml"
         }
     }
+
+    function updateCoffeeImage() {
+            if (myVariable === "Espresso") {
+                coffeeFill.source = "qrc:/images/espresso.png";
+            } else if (myVariable === "Latte") {
+                coffeeFill.source = "qrc:/images/latte.png";
+            } else if (myVariable === "Cappuccino") {
+                coffeeFill.source = "qrc:/images/cappuccino.png";
+            } else if (myVariable === "Americano") {
+                coffeeFill.source = "qrc:/images/coffeeLevel.png";
+            }else if (myVariable === "Macchiato") {
+                coffeeFill.source = "qrc:/images/macchiato.png";
+            }
+    }
+
+    onMyVariableChanged: updateCoffeeImage()
 }

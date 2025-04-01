@@ -14,6 +14,8 @@ Item {
             height: 150
             color: "blue"
             radius: 25
+            border.color: black
+            border.width: 1
 
             Text {
                 anchors.centerIn: parent
@@ -39,6 +41,8 @@ Item {
             height: 150
             color: "red"
             radius: 25
+            border.color: black
+            border.width: 1
 
             Text {
                 anchors.centerIn: parent

@@ -8,7 +8,7 @@ Item {
     ListModel {
         id: listModel
         ListElement { name: "Espresso"; page: "CoffeeStrength.qml"; image_src: "qrc:/images/espresso.png"}
-        ListElement { name: "Americano"; page: "CoffeeStrength.qml"; image_src: "qrc:/images/americano.png" }
+        ListElement { name: "Americano"; page: "CoffeeStrength.qml"; image_src: "qrc:/images/coffeeLevel.png" }
         ListElement { name: "Latte"; page: "CoffeeStrength.qml"; image_src: "qrc:/images/latte.png" }
         ListElement { name: "Cappuccino"; page: "CoffeeStrength.qml"; image_src: "qrc:/images/cappuccino.png" }
         ListElement { name: "Macchiato"; page: "CoffeeStrength.qml"; image_src: "qrc:/images/macchiato.png" }
@@ -29,13 +29,18 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             width: 110
             height: 110
-            color: "grey"
+            color: "#D2B48C"
             radius: 20
+            border.color: "black"
+            border.width: 1
 
             Image {
                 id: coffeeImage
                 source: image_src
+                width: 75
+                height: 212
                 anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
 
                 MouseArea {
                     anchors.fill: parent

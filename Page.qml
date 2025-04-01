@@ -15,8 +15,8 @@ Item {
         anchors.fill: parent
         gradient:
             Gradient{
-                GradientStop { position: -0.5; color: "#1a1a1a" }
-                GradientStop { position: 1.0; color: "#595555" }
+                GradientStop { position: -0.5; color: "#e3c6a6" }
+                GradientStop { position: 1.0; color: "#a08460" }
             }
     }
 
